@@ -25,7 +25,11 @@
             </div>
           </div>
 
-          <div class="thumbs">
+          <div
+            class="thumbs"
+            @mouseover="upHere = true"
+            @mouseleave="upHere = false"
+          >
             <div class="prev" @click="prevImg"></div>
             <div class="next" @click="nextImg"></div>
             <div
