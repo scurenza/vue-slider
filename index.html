@@ -15,6 +15,7 @@
         <div class="slider-wrapper" tabindex="0">
           <div class="item">
             <img
+              @click="runAutoplay"
               :src="slides[currentSlide].image"
               alt="slides[currentSlide].title"
             />

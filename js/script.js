@@ -93,7 +93,18 @@ createApp({
         },
         showImg: function(clickedSlide) {
             this.currentSlide = clickedSlide;
+        },
+        runAutoplay: function() {
+            setInterval(function() {
+                if(this.currentSlide < this.slides.length - 1) {
+                    this.currentSlide++;
+                } else {
+                    this.currentSlide = 0;
+                }
+            },3000)
         }
+            
+        
     }
 }).mount('#app')
 
