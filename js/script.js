@@ -78,18 +78,21 @@ createApp({
     },
     methods: {
         nextImg: function() {
-            if(currentSlide < this.slides.length - 1) {
+            if(this.currentSlide < this.slides.length - 1) {
                 this.currentSlide++;
             } else {
                 this.currentSlide = 0;
             }
         },
         prevImg: function() {
-            if(currentSlide > 0) {
+            if(this.currentSlide > 0) {
                 this.currentSlide--;
             } else {
                 this.currentSlide = this.slides.length - 1;
             }
+        },
+        showImg: function(clickedSlide) {
+            this.currentSlide = clickedSlide;
         }
     }
 }).mount('#app')
